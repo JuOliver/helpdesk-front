@@ -1,30 +1,31 @@
-.container{
+.container {
     height: 100%;
 }
 
-.sidenav{
+.sidenav {
     width: 13rem;
     color: white;
-    background: rgba(125,41,173,1);    
+    background: #00308F;
+
 }
 
-img{
+img {
     width: 100%;
     height: 7rem;
     margin: .8rem auto 1rem auto;
 }
 
-.sidenav a{
+.sidenav a {
     color: white;
 }
 
-.sidenav i{
-    margin-right:.6rem ;
+.sidenav i {
+    margin-right: .6rem;
 }
 
-.menu{
+.menu {
     margin: 1rem 0 0 1rem;
-    color:white;
-    background:rgba(125,41,173,1);
+    color: white;
+    background: #00308F;
 
 }
