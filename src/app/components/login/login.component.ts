@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { Credenciais } from 'src/app/models/credenciais';
 
 @Component({
@@ -13,9 +14,13 @@ export class LoginComponent implements OnInit {
     senha: ''
   }
 
-  constructor() { }
+  constructor(private toast: ToastrService) { }
 
   ngOnInit(): void {
+  }
+
+  logar(){
+    this.toast.error('Usuário e/ou senha inválidos!', 'Login');
   }
 
 }
