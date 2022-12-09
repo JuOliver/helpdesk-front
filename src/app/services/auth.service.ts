@@ -31,6 +31,7 @@ export class AuthService {
     return false;
   }
 
+  /**Limpa as informacoes do usuario */
   logout() {
     localStorage.clear();
   }
