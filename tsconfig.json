@@ -26,5 +26,8 @@
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true
-  }
+  },
+  "paths": {
+  "ngx-mask": ["node_modules/ngx-mask/fesm2015/ngx-mask.mjs"]
+}
 }

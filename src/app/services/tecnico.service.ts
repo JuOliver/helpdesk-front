@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { API_CONFIG } from '../config/api.config';
-import { tecnico } from '../models/tecnico';
+import { Tecnico } from '../models/tecnico';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,11 @@ export class TecnicoService {
 
   constructor(private http: HttpClient) { }
 
-  findAll(): Observable<tecnico[]>{
-    return this.http.get<tecnico[]>(`${API_CONFIG.baseUrl}/tecnicos`);
+  findAll(): Observable<Tecnico[]>{
+    return this.http.get<Tecnico[]>(`${API_CONFIG.baseUrl}/tecnicos`);
+  }
+
+  create(tecnico: Tecnico): Observable<Tecnico> {
+    return this.http.post<Tecnico>(`${API_CONFIG.baseUrl}/tecnicos`, tecnico);
   }
 }

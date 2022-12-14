@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-import { tecnico } from 'src/app/models/tecnico';
+import { Tecnico } from 'src/app/models/tecnico';
 import { TecnicoService } from 'src/app/services/tecnico.service';
 
 @Component({
@@ -11,10 +11,10 @@ import { TecnicoService } from 'src/app/services/tecnico.service';
 })
 export class TecnicoListComponent implements OnInit {
 
-  ELEMENT_DATA: tecnico[] = []
+  ELEMENT_DATA: Tecnico[] = []
 
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'acoes'];
-  dataSource = new MatTableDataSource<tecnico>(this.ELEMENT_DATA);
+  dataSource = new MatTableDataSource<Tecnico>(this.ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
@@ -29,7 +29,7 @@ export class TecnicoListComponent implements OnInit {
   findAll() {
     this.service.findAll().subscribe(resposta => {
       this.ELEMENT_DATA = resposta
-      this.dataSource = new MatTableDataSource<tecnico>(resposta);
+      this.dataSource = new MatTableDataSource<Tecnico>(resposta);
       this.dataSource.paginator = this.paginator;
     })
   }
