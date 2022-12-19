@@ -4,6 +4,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Tecnico } from 'src/app/models/tecnico';
 import { TecnicoService } from 'src/app/services/tecnico.service';
 
+
 @Component({
   selector: 'app-tecnico-list',
   templateUrl: './tecnico-list.component.html',
