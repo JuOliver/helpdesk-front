@@ -31,7 +31,8 @@ const routes: Routes = [
       { path: 'clientes/delete/:id', component: ClienteDeleteComponent },
 
 
-      { path: 'chamados', component: ChamadoListComponent }]
+      { path: 'chamados', component: ChamadoListComponent }
+    ]
   }
 ];
 
